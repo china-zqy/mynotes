@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         pref = PreferenceManager.getDefaultSharedPreferences(this);
         Button button_login = (Button) findViewById(R.id.button_login);
         Button button_forget=(Button)findViewById(R.id.button_forget);
+        Button button_2048=(Button)findViewById(R.id.button_2048);
         editText_account = (EditText) findViewById(R.id.edittext_account);
         editText_password = (EditText) findViewById(R.id.edittext_password);
         rememberPass = (CheckBox) findViewById(R.id.remember_pass);
@@ -107,6 +108,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,AccountForget.class);
+                startActivity(intent);
+            }
+        });
+        button_2048.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this, _2048Activity.class);
                 startActivity(intent);
             }
         });
