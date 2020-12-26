@@ -16,34 +16,37 @@
             android:layout_height="wrap_content"
             android:text="总支出"
             android:textSize="20dp"/>
+
         <TextView
             android:id="@+id/textview_allzhichu"
-            android:layout_width="70dp"
+            android:layout_width="65dp"
             android:layout_height="match_parent"
-            android:text="100"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="1000000" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="总收入"
             android:textSize="20dp"/>
+
         <TextView
             android:id="@+id/textview_allsouru"
-            android:layout_width="70dp"
+            android:layout_width="65dp"
             android:layout_height="match_parent"
-            android:text="1000"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="1000000" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="剩余"
             android:textSize="20dp"/>
+
         <TextView
             android:id="@+id/textview_shengyu"
-            android:layout_width="70dp"
+            android:layout_width="65dp"
             android:layout_height="match_parent"
-            android:text="900"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="1000000" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -86,16 +89,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="收支"/>
+
         <TextView
-            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="金额"/>
-        <TextView
             android:layout_marginLeft="10dp"
+            android:text="金额" />
+
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="方式"/>
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:text="方式" />
+
         <TextView
             android:layout_marginLeft="30dp"
             android:layout_width="wrap_content"

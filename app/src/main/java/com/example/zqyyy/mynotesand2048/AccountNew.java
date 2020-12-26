@@ -1,4 +1,4 @@
-package com.example.zqyyy.familyaccountkeeping;
+package com.example.zqyyy.mynotesand2048;
 
 import android.app.DatePickerDialog;
 import android.content.ContentValues;
@@ -19,7 +19,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-import static com.example.zqyyy.familyaccountkeeping.AcountMain.now_account;
+import static com.example.zqyyy.mynotesand2048.AcountMain.now_account;
 
 /**
  * Created by zqy on 2020/12/21.

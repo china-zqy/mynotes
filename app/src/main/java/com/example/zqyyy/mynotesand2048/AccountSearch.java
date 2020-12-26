@@ -1,4 +1,4 @@
-package com.example.zqyyy.familyaccountkeeping;
+package com.example.zqyyy.mynotesand2048;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -18,7 +18,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.zqyyy.familyaccountkeeping.AcountMain.now_account;
+import static com.example.zqyyy.mynotesand2048.AcountMain.now_account;
 
 /**
  * Created by zqy on 2020/12/21.

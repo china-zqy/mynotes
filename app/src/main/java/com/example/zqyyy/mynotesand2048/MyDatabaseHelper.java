@@ -1,4 +1,4 @@
-package com.example.zqyyy.familyaccountkeeping;
+package com.example.zqyyy.mynotesand2048;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

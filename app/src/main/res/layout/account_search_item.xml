@@ -32,16 +32,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="方式"/>
+
     <TextView
-        android:layout_marginLeft="30dp"
         android:id="@+id/textview_search_shijian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="时间"/>
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:text="时间" />
+
     <TextView
-        android:layout_marginLeft="50dp"
         android:id="@+id/textview_search_beizhu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="备注"/>
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="备注" />
 </LinearLayout>

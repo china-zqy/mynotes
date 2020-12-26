@@ -45,13 +45,14 @@
         android:layout_height="wrap_content"
         android:text="餐饮"
         android:textSize="20sp"/>
-    <TextView
-        android:id="@+id/textview_canyin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="20.3%"
-        android:textSize="16sp"
-        android:layout_marginLeft="245dp"/>
+
+        <TextView
+            android:id="@+id/textview_canyin"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="245dp"
+            android:text="20.3%"
+            android:textSize="16sp" />
 </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -89,13 +90,14 @@
                     android:layout_height="wrap_content"
                     android:text="服饰"
                     android:textSize="20sp"/>
+
                 <TextView
                     android:id="@+id/textview_fushi"
-                    android:layout_width="wrap_content"
+                    android:layout_width="45dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="245dp"
                     android:text="20.3%"
-                    android:textSize="16sp"
-                    android:layout_marginLeft="245dp"/>
+                    android:textSize="16sp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -132,13 +134,14 @@
                     android:layout_height="wrap_content"
                     android:text="购物"
                     android:textSize="20sp"/>
+
                 <TextView
                     android:id="@+id/textview_shopping"
-                    android:layout_width="wrap_content"
+                    android:layout_width="45dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="245dp"
                     android:text="20.3%"
-                    android:textSize="16sp"
-                    android:layout_marginLeft="245dp"/>
+                    android:textSize="16sp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -176,13 +179,14 @@
                     android:layout_height="wrap_content"
                     android:text="交通"
                     android:textSize="20sp"/>
+
                 <TextView
                     android:id="@+id/textview_jiaotong"
-                    android:layout_width="wrap_content"
+                    android:layout_width="45dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="245dp"
                     android:text="20.3%"
-                    android:textSize="16sp"
-                    android:layout_marginLeft="245dp"/>
+                    android:textSize="16sp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -219,13 +223,14 @@
                     android:layout_height="wrap_content"
                     android:text="娱乐"
                     android:textSize="20sp"/>
+
                 <TextView
                     android:id="@+id/textview_yule"
-                    android:layout_width="wrap_content"
+                    android:layout_width="45dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="245dp"
                     android:text="20.3%"
-                    android:textSize="16sp"
-                    android:layout_marginLeft="245dp"/>
+                    android:textSize="16sp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -262,13 +267,14 @@
                     android:layout_height="wrap_content"
                     android:text="日用"
                     android:textSize="20sp"/>
+
                 <TextView
                     android:id="@+id/textview_riyong"
-                    android:layout_width="wrap_content"
+                    android:layout_width="45dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="245dp"
                     android:text="20.3%"
-                    android:textSize="16sp"
-                    android:layout_marginLeft="245dp"/>
+                    android:textSize="16sp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -304,13 +310,14 @@
                     android:layout_height="wrap_content"
                     android:text="其他"
                     android:textSize="20sp"/>
+
                 <TextView
                     android:id="@+id/textview_qita"
-                    android:layout_width="wrap_content"
+                    android:layout_width="45dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="245dp"
                     android:text="20.3%"
-                    android:textSize="16sp"
-                    android:layout_marginLeft="245dp"/>
+                    android:textSize="16sp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"

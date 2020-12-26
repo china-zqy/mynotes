@@ -1,4 +1,4 @@
-package com.example.zqyyy.familyaccountkeeping;
+package com.example.zqyyy.mynotesand2048;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -276,7 +276,7 @@ public class MainView extends View {
                 int sY = startingY + gridWidth + (cellSize + gridWidth) * yy;
                 int eY = sY + cellSize;
 
-                com.example.zqyyy.familyaccountkeeping.Tile currentTile = game.grid.getCellContent(xx, yy);
+                com.example.zqyyy.mynotesand2048.Tile currentTile = game.grid.getCellContent(xx, yy);
                 if (currentTile != null) {
                     // Get and represent the value of the tile
                     int value = currentTile.getValue();
@@ -606,7 +606,7 @@ public class MainView extends View {
         } catch (Exception e) {
             System.out.println("Error getting assets?");
         }
-        setOnTouchListener(new com.example.zqyyy.familyaccountkeeping.InputListener(this));
+        setOnTouchListener(new com.example.zqyyy.mynotesand2048.InputListener(this));
         game.newGame();
     }
 

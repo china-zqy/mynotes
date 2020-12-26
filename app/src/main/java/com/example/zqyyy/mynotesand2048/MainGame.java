@@ -1,4 +1,4 @@
-package com.example.zqyyy.familyaccountkeeping;
+package com.example.zqyyy.mynotesand2048;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -19,9 +19,9 @@ public class MainGame {
 
     public static final int FADE_GLOBAL_ANIMATION = 0;
 
-    public static final long MOVE_ANIMATION_TIME = com.example.zqyyy.familyaccountkeeping.MainView.BASE_ANIMATION_TIME;
-    public static final long SPAWN_ANIMATION_TIME = com.example.zqyyy.familyaccountkeeping.MainView.BASE_ANIMATION_TIME;
-    public static final long NOTIFICATION_ANIMATION_TIME = com.example.zqyyy.familyaccountkeeping.MainView.BASE_ANIMATION_TIME * 5;
+    public static final long MOVE_ANIMATION_TIME = com.example.zqyyy.mynotesand2048.MainView.BASE_ANIMATION_TIME;
+    public static final long SPAWN_ANIMATION_TIME = com.example.zqyyy.mynotesand2048.MainView.BASE_ANIMATION_TIME;
+    public static final long NOTIFICATION_ANIMATION_TIME = com.example.zqyyy.mynotesand2048.MainView.BASE_ANIMATION_TIME * 5;
     public static final long NOTIFICATION_DELAY_TIME = MOVE_ANIMATION_TIME
             + SPAWN_ANIMATION_TIME;
     private static final String HIGH_SCORE = "high score";
@@ -62,9 +62,9 @@ public class MainGame {
 
     private Context mContext;
 
-    private com.example.zqyyy.familyaccountkeeping.MainView mView;
+    private com.example.zqyyy.mynotesand2048.MainView mView;
 
-    public MainGame(Context context, com.example.zqyyy.familyaccountkeeping.MainView view) {
+    public MainGame(Context context, com.example.zqyyy.mynotesand2048.MainView view) {
         mContext = context;
         mView = view;
         initSoundPool();
@@ -102,12 +102,12 @@ public class MainGame {
     private void addRandomTile() {
         if (grid.isCellsAvailable()) {
             int value = Math.random() < 0.9 ? 2 : 4;
-            com.example.zqyyy.familyaccountkeeping.Tile tile = new com.example.zqyyy.familyaccountkeeping.Tile(grid.randomAvailableCell(), value);
+            com.example.zqyyy.mynotesand2048.Tile tile = new com.example.zqyyy.mynotesand2048.Tile(grid.randomAvailableCell(), value);
             spawnTile(tile);
         }
     }
 
-    private void spawnTile(com.example.zqyyy.familyaccountkeeping.Tile tile) {
+    private void spawnTile(com.example.zqyyy.mynotesand2048.Tile tile) {
         grid.insertTile(tile);
         aGrid.startAnimation(tile.getX(), tile.getY(), SPAWN_ANIMATION,
                 SPAWN_ANIMATION_TIME, MOVE_ANIMATION_TIME, null); // Direction:
@@ -130,8 +130,8 @@ public class MainGame {
     }
 
     private void prepareTiles() {
-        for (com.example.zqyyy.familyaccountkeeping.Tile[] array : grid.field) {
-            for (com.example.zqyyy.familyaccountkeeping.Tile tile : array) {
+        for (com.example.zqyyy.mynotesand2048.Tile[] array : grid.field) {
+            for (com.example.zqyyy.mynotesand2048.Tile tile : array) {
                 if (grid.isCellOccupied(tile)) {
                     tile.setMergedFrom(null);
                 }
@@ -139,7 +139,7 @@ public class MainGame {
         }
     }
 
-    private void moveTile(com.example.zqyyy.familyaccountkeeping.Tile tile, Cell cell) {
+    private void moveTile(com.example.zqyyy.mynotesand2048.Tile tile, Cell cell) {
 
         grid.field[tile.getX()][tile.getY()] = null;
         grid.field[cell.getX()][cell.getY()] = tile;
@@ -157,7 +157,7 @@ public class MainGame {
     public void cheat() {
         playSound(3, 1);
         ArrayList<Cell> notAvailableCell = grid.getNotAvailableCells();
-        com.example.zqyyy.familyaccountkeeping.Tile tile;
+        com.example.zqyyy.mynotesand2048.Tile tile;
         prepareUndoState();
         for (Cell cell : notAvailableCell) {
             tile = grid.getCellContent(cell);
@@ -224,19 +224,19 @@ public class MainGame {
         for (int xx : traversalsX) {
             for (int yy : traversalsY) {
                 Cell cell = new Cell(xx, yy);
-                com.example.zqyyy.familyaccountkeeping.Tile tile = grid.getCellContent(cell);
+                com.example.zqyyy.mynotesand2048.Tile tile = grid.getCellContent(cell);
 
                 if (tile != null) {
                     Cell[] positions = findFarthestPosition(cell, vector);
-                    com.example.zqyyy.familyaccountkeeping.Tile next = grid.getCellContent(positions[1]);
+                    com.example.zqyyy.mynotesand2048.Tile next = grid.getCellContent(positions[1]);
 
                     if (next != null && next.getValue() == tile.getValue()
                             && next.getMergedFrom() == null) {
                         playSound(2, 1); // get ponit sound
 
-                        com.example.zqyyy.familyaccountkeeping.Tile merged = new com.example.zqyyy.familyaccountkeeping.Tile(positions[1],
+                        com.example.zqyyy.mynotesand2048.Tile merged = new com.example.zqyyy.mynotesand2048.Tile(positions[1],
                                 tile.getValue() * 2);
-                        com.example.zqyyy.familyaccountkeeping.Tile[] temp = {tile, next};
+                        com.example.zqyyy.mynotesand2048.Tile[] temp = {tile, next};
                         merged.setMergedFrom(temp);
 
                         grid.insertTile(merged);
@@ -363,7 +363,7 @@ public class MainGame {
     }
 
     private boolean tileMatchesAvailable() {
-        com.example.zqyyy.familyaccountkeeping.Tile tile;
+        com.example.zqyyy.mynotesand2048.Tile tile;
 
         for (int xx = 0; xx < numSquaresX; xx++) {
             for (int yy = 0; yy < numSquaresY; yy++) {
@@ -375,7 +375,7 @@ public class MainGame {
                         Cell cell = new Cell(xx + vector.getX(), yy
                                 + vector.getY());
 
-                        com.example.zqyyy.familyaccountkeeping.Tile other = grid.getCellContent(cell);
+                        com.example.zqyyy.mynotesand2048.Tile other = grid.getCellContent(cell);
 
                         if (other != null
                                 && other.getValue() == tile.getValue()) {

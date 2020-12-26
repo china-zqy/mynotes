@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="记账"
+            android:text="随记"
             android:textColor="#2196F3"
             android:textSize="36sp" />
     </LinearLayout>
@@ -137,7 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="#4662B6"
+            android:background="@android:drawable/divider_horizontal_textfield"
             android:text="忘记密码"
             android:textSize="14sp" />
 
@@ -153,25 +153,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="#4662B6"
+            android:background="@android:drawable/divider_horizontal_textfield"
             android:text="立即注册"
             android:textSize="14sp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="411dp"
-        android:layout_height="125dp"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
         android:layout_gravity="center"
         android:orientation="horizontal">
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
         <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:id="@+id/button_2048"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="#00FFFFFF"
-            android:text="今天天气怎么样？" />
+            android:background="@drawable/logo_2048" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,8 +1,8 @@
-package com.example.zqyyy.familyaccountkeeping;
+package com.example.zqyyy.mynotesand2048;
 
 public class Tile extends Cell {
     private int value;
-    private com.example.zqyyy.familyaccountkeeping.Tile[] mergedFrom = null;
+    private com.example.zqyyy.mynotesand2048.Tile[] mergedFrom = null;
 
     public Tile(int x, int y, int value) {
         super(x, y);
@@ -23,11 +23,11 @@ public class Tile extends Cell {
         return this.value;
     }
 
-    public com.example.zqyyy.familyaccountkeeping.Tile[] getMergedFrom() {
+    public com.example.zqyyy.mynotesand2048.Tile[] getMergedFrom() {
         return mergedFrom;
     }
 
-    public void setMergedFrom(com.example.zqyyy.familyaccountkeeping.Tile[] tile) {
+    public void setMergedFrom(com.example.zqyyy.mynotesand2048.Tile[] tile) {
         mergedFrom = tile;
     }
 }
